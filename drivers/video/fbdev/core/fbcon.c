@@ -881,8 +881,8 @@ static int set_con2fb_map(int unit, int newidx, int user)
  		con2fb_init_display(vc, info, unit, show_logo);
 	}
 
-	if (!search_fb_in_map(info_idx))
-		info_idx = newidx;
+		if (!search_fb_in_map(info_idx))
+			info_idx = newidx;
 
  	return err;
 }

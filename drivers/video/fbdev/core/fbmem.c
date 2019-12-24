@@ -652,18 +652,18 @@ int fb_prepare_logo(struct fb_info *info, int rotate)
 		fb_logo.depth = 1;
 
 
- 	if (fb_logo.depth > 4 && depth > 4) {
- 		switch (info->fix.visual) {
- 		case FB_VISUAL_TRUECOLOR:
- 			fb_logo.needs_truepalette = 1;
- 			break;
- 		case FB_VISUAL_DIRECTCOLOR:
- 			fb_logo.needs_directpalette = 1;
- 			fb_logo.needs_cmapreset = 1;
- 			break;
- 		case FB_VISUAL_PSEUDOCOLOR:
- 			fb_logo.needs_cmapreset = 1;
- 			break;
+ 		if (fb_logo.depth > 4 && depth > 4) {
+ 			switch (info->fix.visual) {
+ 			case FB_VISUAL_TRUECOLOR:
+ 				fb_logo.needs_truepalette = 1;
+ 				break;
+ 			case FB_VISUAL_DIRECTCOLOR:
+ 				fb_logo.needs_directpalette = 1;
+ 				fb_logo.needs_cmapreset = 1;
+ 				break;
+ 			case FB_VISUAL_PSEUDOCOLOR:
+ 				fb_logo.needs_cmapreset = 1;
+ 				break;
  		}
  	}
 
